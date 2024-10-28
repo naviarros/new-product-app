@@ -4,9 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Product;
+use App\Models\User;
+use Laravel\Sanctum\Sanctum;
 
-class Products extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,5 +15,6 @@ class Products extends Seeder
     public function run(): void
     {
         //
+        $users = User::factory()->count(5)->create();
     }
 }
